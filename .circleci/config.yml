@@ -16,7 +16,7 @@ jobs:
         command: |
           echo "foo"
 
-workflow:
+workflows:
   version: 2
   ci:
     jobs:
