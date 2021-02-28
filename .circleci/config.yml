@@ -1,0 +1,23 @@
+version: 2.1
+
+executors:
+  openapi-generator-cli:
+    docker:
+      - image: openapitools/openapi-generator-cli:v5.0.1
+
+jobs:
+  foo:
+    executor:
+      name: openapi-generator-cli
+  steps:
+    - checkout
+    - run:
+        name: foo
+        command: |
+          echo "foo"
+
+workflow:
+  version: 2
+  ci:
+    jobs:
+      - foo
