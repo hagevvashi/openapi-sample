@@ -9,12 +9,12 @@ jobs:
   foo:
     executor:
       name: openapi-generator-cli
-  steps:
-    - checkout
-    - run:
-        name: foo
-        command: |
-          echo "foo"
+    steps:
+      - checkout
+      - run:
+          name: foo
+          command: |
+            echo "foo"
 
 workflows:
   version: 2
